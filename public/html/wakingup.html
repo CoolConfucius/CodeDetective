@@ -1,0 +1,261 @@
+<div class="homepage selectSuit" ng-show="selectSuitStage">
+  <br>
+  <div class="centerblock">
+    <h1>Select your symbol</h1>
+    <div class="row centertext">
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('spades')">&spades;</h1>
+      </div>
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('clubs')">&clubs;</h1>
+      </div>
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('hearts')">&hearts;</h1>
+      </div>    
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('diams')">&diams;</h1>
+      </div>
+    </div>
+    
+    <div class="row centertext">
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('spades2')">&#9828;</h1>
+      </div>
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('clubs2')">&#9831;</h1>
+      </div>
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('hearts2')">&#9825;</h1>
+      </div>    
+      <div class="col-md-3">
+        <h1 ng-click="selectSuit('diams2')">&#9826;</h1>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="centerblock">
+    <a ng-click="selectSuitStage = false"><h2>Go</h2></a>
+  </div>
+</div>
+
+
+<br>
+<div ng-hide="selectSuitStage">
+  <div class="row centerblock">
+
+    <button type="button" class="btn btn-default">
+      <a target="_blank" ui-sref="profile">Profile</a>
+    </button>
+
+    <button type="button" class="btn btn-default"><a href="">Previous</a></button>
+
+    <button type="button" class="btn btn-default"><a href="">Next</a></button>
+
+    <button type="button" class="btn btn-default"><a ui-sref="home">Log out</a></button>
+  </div>
+  <button type="button" class="btn btn-default"><a ng-click="wakingupAll()">Show All</a></button>
+  <br>
+  <div class="row centerblock">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Good morning. What's your name?</p> 
+      <p>Enter it in the input box and click the console.log when you're done</p>
+    </div>    
+  </div>
+  <div class="row centerblock">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="code">
+        <p>var yourName = " <input type="text" placeholder="yourName" ng-model="name"> " ;</p>      
+        <a ng-click="yourName()"><p>console.log(yourName);</p></a> 
+      </div>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup1">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Hello <span class="bluetext">{{name}}</span>, you are the detective of Black Jack Hack, a startup aimed at solving problems through coding. Before you meet your client, let's make sure you're awake.</p> 
+      <p>The language we use in this world is JavaScript. Earlier, you just stored a string into the variable yourName. Strings are text values in JavaScript and are surrounded by quotes. But you can also store numbers as values. Try storing a number in a variable. How old are you? Click console.log once you're done.
+      </p>
+    </div>    
+  </div>
+  <div class="row centerblock" ng-show="wakingup1">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="code">
+        <p>var yourAge = <input type="number" ng-model="age"> ;</p>      
+        <a ng-click="yourAge()"><p>console.log(yourAge);</p></a>        
+      </div>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup2">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Perfect! You just console.log these numbers. Let's do some math. Here are some variables:</p>       
+      <div class="code">
+        <p>var sum = 6 + 4</p>      
+        <p>var difference = 9 - 5</p>    
+        <p>var product = 3 * 4</p>    
+        <p>var quotient = 12 / 4</p>    
+        <p>var modulus = 43 % 10</p>
+        <p>console.log(sum);</p>
+        <p>console.log(difference);</p>
+        <p>console.log(product);</p>
+        <p>console.log(quotient);</p>
+        <p>console.log(modulus);</p>        
+      </div>
+      <br>
+      <p>In programming, % is the modulus operator and it returns the remainder after division. So what will console logs give you in order? Click submit when you're done.</p>
+    </div>    
+  </div>
+  <div class="row centerblock" ng-show="wakingup2">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="code">
+        <input type="number" ng-model="sum">
+        <input type="number" ng-model="difference">
+        <input type="number" ng-model="product">
+        <input type="number" ng-model="quotient">
+        <input type="number" ng-model="mod">
+        <p><a ng-click="simplemath()">Submit</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup3">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Excellent! Let's work with comparators and boolean operators. The common number comparators in JavaScript are: </p>
+      <ul>
+        <li>== which returns true when the left side and right side are equal. Else, it returns false</li>
+        <li>!= which returns true when the left side and right side are not equal. Else, it returns false</li>        
+        <li>> which returns true when the left side is greater than the right. Else, it returns false</li>
+        <li>< which returns true when the left side is less than the right. Else it returns false</li>
+        <li>=> which returns true when the left side is greater than or equal to the right. Else, it returns false</li>
+        <li>=< which returns true when the left side is less than or equal to the right. Else it returns false</li>
+      </ul>
+      <p>So what will the following code return, Detective?</p>
+      <div class="code">
+        <p>console.log(6 == 4); //A</p>
+        <p>console.log(12 != 4); //B</p>
+        <p>console.log(6 > 4); //C</p>
+        <p>console.log(9 < 5); //D</p>
+        <p>console.log(8 >= -2); //E</p>
+        <p>console.log(10 <= 10); //F</p>        
+      </div>
+      <p>The following checkboxes correspond to my console logs in respective order. If the console log returns true, then check its corresponding checkbox. If it returns false, then leave it blank. Fill in the input boxes then click submit.</p>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup3">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="code">
+        A <input type="checkbox" ng-model="equal">
+        B <input type="checkbox" ng-model="unequal">
+        C <input type="checkbox" ng-model="gt">
+        D <input type="checkbox" ng-model="lt">
+        E <input type="checkbox" ng-model="gte">
+        F <input type="checkbox" ng-model="lte">
+        <p><a ng-click="simplebool()">Submit</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup4">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Good job, Detective! When it comes to strings, the plus sign concatenates them. For example:</p>            
+      <p class="code">console.log("Raindrops On Roses" + " And " + "Whiskers On Kittens");</p>
+      <p> Would return:</p>
+      <p class="code">"Raindrops On Roses And Whiskers On Kittens"</p>
+      <p>You can concatenate numbers into your string, too! But keep in mind of spaces. Expressions get evaluated.</p>
+      <div class="code">
+        <p>console.log("Platform" + 9 + "and " + 3/4);</p>
+      </div>
+      <p> Would return:</p>
+      <p class="code">"Platform9and 0.75"</p>
+      <p>While:</p>
+      <div class="code">
+        <p>console.log("Platform " + 9 + " and 3/4");</p>
+      </div>
+      <p> Would return:</p>
+      <p class="code">"Platform 9 and 3/4"</p>      
+      <p>You may also use comparators on strings. Answer this, Detective. What will the following code return? Note that case counts!</p>
+      <div class="code">
+        <p>console.log("The Wright Brothers" == "The Wright Brothers"); //A</p>
+        <p>console.log("The Wright Brothers" == "Super Mario Brothers"); //B</p>
+        <p>console.log("The Wright Brothers" != "the wright brothers"); //C</p>      
+      </div>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup4">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <div class="code">
+        A <input type="checkbox" ng-model="equalStrings">
+        B <input type="checkbox" ng-model="unequalStrings">
+        C <input type="checkbox" ng-model="caseStrings">
+      </div>
+      <a ng-click="stringcompare()">Submit</a>
+    </div>
+  </div>
+  <div class="row centerblock" ng-show="wakingup5">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <p>Correct! One more thing you should know is that the length of strings can be accessed with the .length property. Click on the following alert to see what it returns.</p>       
+      <div class="code">
+        <a ng-click="stringlength()"><p>alert("One Fish, Two Fish, Red Fish, Blue Fish".length);</p></a>
+      </div>      
+    </div>    
+  </div>
+  <div class="row centerblock" ng-show="wakingup6">
+    <div class="col-md-1 centertext">
+      <span class="character">&#9998; </span>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <p class="code">39</p>
+      <p>That's the length of the string. Spaces and any non-alphabetic characters are counted, too!</p>
+      <p>You have a visitor. Before we proceed, click save to create an account and save your progress.</p>
+    </div>    
+  </div>
+
+  <div class="row centerblock" ng-show="wakingup6">
+    <div class="col-md-1 centertext">
+      <span class="character">{{symbol}} </span>
+    </div>
+    <div class="col-md-10">
+      <br>      
+      <p><a ui-sref="users.register">Save</a></p>      
+    </div>
+  </div>
+</div>
+
+<br>
+<br>

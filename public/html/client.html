@@ -1,0 +1,171 @@
+<br>
+<div class="row centerblock">
+  
+    <button type="button" class="btn btn-default">
+      <a target="_blank" ui-sref="profile">Profile</a>
+      </button>
+  
+    <button type="button" class="btn btn-default"><a href="">Previous</a></button>
+  
+    <button type="button" class="btn btn-default"><a href="">Next</a></button>
+  
+    <button type="button" class="btn btn-default"><a ui-sref="home">Log out</a></button>
+</div>
+<br>
+<div class="row centerblock">
+  <div class="col-md-offset-1 col-md-10">
+    <p>Your client is here. Better go greet him!<p>       
+  </div>    
+</div>
+<div class="row centerblock">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9820; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Hello, Detective of Black Jack Hack. I'm &#9820;, a senior developer at the Chess Tech Company. Are you worthy for the case? Solve these javaScript challenges to prove yourself. Here are some code. What does it return?</p>
+    <div class="code">
+      <p>var number = 3;</p>
+      <p>number = 9;</p>
+      <p>number = number + 3;</p>
+      <p>number += 3;</p>
+      <p>var newNumber = number * 10;</p>
+      <p>var firstString = "A string ";</p>
+      <p>var secondString = " another string";</p>
+      <p>var concat = firstString + number + secondString + newNumber + " and third string!";</p>
+      <p>console.log(concat);</p>
+    </div>
+  </div>
+</div>
+<div class="row centerblock">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9998; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Detective. Keep in mind what values are stored in what variables! Know that:<p>
+    <p class="code">
+      variable += 3;
+      variable2 *= 3;
+    </p>
+    <p>are the same operations as:<p>
+      <p class="code">
+      variable = variable + 3;
+      variable2 = variable2 * 3;
+    </p>
+  </div>
+</div>
+<div class="row centerblock">
+  <div class="col-md-1 centertext">
+    <span class="character">{{symbol}} </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p class="code"><input type="text" ng-model="vars"></p>
+    <a ng-click="simplevars()">Submit</a>
+  </div>
+  </div>
+</div>
+
+<div class="row centerblock" ng-show="client1">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9820; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Correct. But that was an easy one. Here are some code. What does it return?</p>
+    <div class="code">
+      <p>var a = "antithesis";</p>
+      <p>var aa = a.length;</p>
+      <p>var b = "blob";</p>
+      <p>var bb = b.length;</p>
+      <p>console.log(aa > bb);</p>
+      <p>var c = a + " " + b;</p>
+      <p>console.log(c.charAt(0));</p>
+      <p>console.log(c.charAt(2));</p>
+      <p>console.log(c.charAt(aa - 1));</p>
+      <p>console.log(c.charAt(aa + 1));</p>      
+    </div>
+  </div>
+</div>
+
+<div class="row centerblock" ng-show="client1">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9998; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Detective, know that each position in a String has a numbered “index” starting from 0. The charAt( ) method retrieves the character at a specific index.<p>
+  </div>
+</div>
+
+<div class="row centerblock" ng-show="client1">
+  <div class="col-md-1 centertext">
+    <span class="character">{{symbol}} </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <div class="code">
+      <input type="checkbox" ng-model="rookB1">
+      <input type="text" ng-model="rookB2">
+      <input type="text" ng-model="rookB3">
+      <input type="text" ng-model="rookB4">
+      <input type="text" ng-model="rookB5"> 
+    </div>
+    <a ng-click="rookB()">Submit</a>
+  </div>
+  </div>
+</div>
+
+
+<!-- <div class="row centerblock">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9998; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Use parseFloat and toString to manipulate the values. Watch out for order of operations!<p>
+  </div>
+</div> -->
+
+<div class="row centerblock" ng-show="client2">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9820; </span>
+  </div>
+  <div class="col-md-10">
+    <p>You've solved my challenges correctly. I suppose I can trust you with this case. Just a week ago, &#9822; has been found dead outside of Castle Hotel, the night after a successful hackathon. I'm certain it's murder. The code police are just too lazy to investigate and find the culprit. That's why I've come to you. They say the detective of Black Jack Hack looks to solve the most challenging of problems. &#9822; has been a rising junior developer and a beloved member of Chess Tech. We've worked closely together and I want justice. Do you accept this challenge? I will reward you generously.</p>
+  </div>
+</div>
+
+
+<div class="row centerblock" ng-show="client2">
+  <div class="col-md-1 centertext">
+    <span class="character">{{symbol}} </span>
+  </div>
+  <div class="col-md-10 code">
+    <br>
+    <p>Leave the payment on my desk and write me as much as you regarding the incident.</p>
+  </div>
+</div>
+
+<div class="row centerblock" ng-show="client2">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9820; </span>
+  </div>
+  <div class="col-md-10">
+    <p class="code">var envelope = rook.envelope;</p>
+    <p class="code">detective.desk.push(envelope);</p>
+    <p>Done. I pushed an envelope object into your desk array. I'm late for me meeting with &#9821;. Notify me when you make a discovery, Detective.</p>
+  </div>
+</div>
+
+<div class="row centerblock" ng-show="client2">
+  <div class="col-md-1 centertext">
+    <span class="character">&#9998; </span>
+  </div>
+  <div class="col-md-10">
+    <br>
+    <p>Arrays and objects are topics we'll have more practice on later. Your inventory array is empty right now. Before you start investigating, let's get you fully equipped.<p>
+  </div>
+</div>
+

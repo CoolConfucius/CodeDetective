@@ -1,0 +1,54 @@
+<div class="row centertext character">
+  <div class="col-md-3">
+    <a>&spades;</a>
+  </div>
+  <div class="col-md-3">
+    <a>&clubs;</a>
+  </div>
+  <div class="col-md-3">
+    <a>&hearts;</a>
+  </div>    
+  <div class="col-md-3">
+    <a>&diams;</a>
+  </div>
+</div>
+<br><br>
+<h1>{{currentState}}</h1>
+​
+<div>
+  <span>Username:<input type="text" ng-model='user.username'></span>
+  <span>Password:<input type="password" ng-model='user.password'></span>
+</div>
+<br>
+<div ng-hide="currentState === 'LOGIN'">
+  <p>Your unicode symbol will represent your identy throughout the game. Pick what appeals most to you.</p>
+  <select ng-model="user.symbol" style="width: 150px, height: 100px">
+    <option value='spades' ng-selected="true">Solid Spades: &spades;</option>
+    <option value='clubs'>Solid Clubs: &clubs;</option>
+    <option style="font-size: 100px"value='hearts'>Solid Hearts: &hearts;</option>
+    <option value='diams'>Solid Diamonds: &diams;</option>
+    <option value='spades2'>Outlined Spades: &#9828;</option>
+    <option value='clubs2'>Outlined Clubs: &#9831;</option>
+    <option value='hearts2'>Outlined Hearts: &#9825;</option>
+    <option value='diams2'>Outlined Diamonds: &#9826;</option>
+  </select>
+</div>
+<br>
+<div>  
+  <button type="button" class="btn btn-default" ng-click='submit(user)'>{{currentState}}</button>
+</div>
+<br><br>
+<div class="row centertext character">
+  <div class="col-md-3">
+    <a>&#9828;</a>
+  </div>
+  <div class="col-md-3">
+    <a>&#9831;</a>
+  </div>
+  <div class="col-md-3">
+    <a>&#9825;</a>
+  </div>    
+  <div class="col-md-3">
+    <a>&#9826;</a>
+  </div>
+</div>
